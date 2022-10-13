@@ -1,0 +1,130 @@
+.studios {
+  padding: var(--padding-section);
+  
+}
+
+.studios--pt-4 {
+  padding-top: 4rem;
+}
+
+.studios-container {
+
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: var(--padding-container);
+}
+
+.studios__title {
+  font-size: 2rem;
+  margin: 0;
+  text-shadow:
+    0 0 0.25rem var(--primary-highlight),
+    0 0 0.5rem var(--primary-highlight);
+}
+
+.studios__studios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.studios__studio {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 0.25rem solid var(--primary-highlight);
+  border-radius: 1rem;
+  padding-bottom: 1rem;
+  overflow: hidden;
+  transition: var(--all-transitions);
+}
+
+.studios__studio:hover {
+  box-shadow:
+    0 0 0.25rem var(--secondary-highlight),
+    0 0 0.5rem var(--secondary-highlight),
+    0 0 0.75rem var(--secondary-highlight);
+  transform: scale(1.05);
+}
+
+.studios__studio-image-container {
+  display: flex;
+  width: 100%;
+  margin: 0;
+}
+
+.studios__studio-image {
+  width: 100%;
+}
+
+.studios__studio-data {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.studios__studio-data-sabor {
+  margin: 0;
+}
+
+.studios__studio-data-precio {
+  color: var(--primary-highlight);
+  font-weight: 500;
+  margin: 0;
+}
+
+.studios__studio-data-color {
+  font-weight: 400;
+  margin: 0;
+}
+
+.studios__studio-data-about {
+  font-weight: 300;
+  margin: 0;
+}
+
+.studios__studio-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.studios__studio-button {
+  border: none;
+  font-weight: 700;
+  background-color: var(--button-color);
+  padding: 0.5rem 1rem;
+  border: 0.125rem solid var(--button-color);
+  border-radius: 0.5rem;
+  color: var(--button-text-color);
+  font-size: 1rem;
+  transition: var(--all-transitions);
+}
+
+.studios__studio-button--active,
+.studios__studio-button:hover {
+  background-color: var(--button-color-active);
+}
+
+@media (min-width: 854px) {
+  .studios-container {
+    max-width: 1024px;
+    margin: auto;
+  }
+
+  .studios__studios {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: stretch;
+  }
+}
